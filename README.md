@@ -5,7 +5,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center"><b>CS115.M11 - TOÁN CHO KHOA HỌC MÁY TÍNH</b></h1>
+<h1 align="center"><b>CS106.M21 Trí tuệ nhân tạo</b></h1>
 
 
 
