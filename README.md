@@ -49,5 +49,5 @@
 | 4      | 20520309      | Lại Chí Thiện          |https://github.com/laichithien                        |20520309@gm.uit.edu.vn   |
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
-1. Tên đồ án: Tìm hiểu và nghiên cứu PressLight trong bài toán điều hướng giao thông
+1. Tên đồ án: Traffic Signal Control
 
