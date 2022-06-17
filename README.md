@@ -50,10 +50,18 @@
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
 Tên đồ án: Traffic Signal Control
-Những chỉnh sửa trong source code (nhằm để tương thích với phiên bản hiện tại trên Google Colaboratory) ở các file sau:
+### Những chỉnh sửa trong source code (nhằm để tương thích với phiên bản hiện tại trên Google Colaboratory) ở các file sau:
 + anon_env.py: sửa "import engine" thành "import pyttsx3", trước đó phải "pip install pyttsx3"
 + simple_dqn_agent.py + network_agent.py: sửa "from keras.optimizers import RMSprop" thành "from tensorflow.keras.optimizers import RMSprop"
 + network_agent: sửa "from keras.engine.topology import Layer" thành "from tensorflow.keras.layers import Layer"
-
-* Mô tả các file trong source code:
-
+### Để chạy một experiment: python -O runexp.py
+### Mô tả các file trong source code:
++ agent.py: Một lớp trừu tượng của các agent khác nhau
++ network_agent.py: Agent PressLight
++ runexp.py: Chạy pipeline với những dòng giao thông khác nhau. File này chứa cấu hình cơ bản của phương pháp. Mọi thông tin chi tiết hơn được mô tả trong config.py
++ config.py: Toàn bộ cấu hình của đồ án này. Một số tham số sẽ được thay thế trong runexp.py, còn lại thì chỉ thay đổi trong file này.
++ pipeline.py: File chứa toàn bộ quy trình: Khởi tạo một môi trường -> Chạy giả lập với một khoảng thời gian nhất định (1 vòng) -> Xây dựng mẫu dữ liệu từ raw log data -> Cập nhật mô hình -> Model pooling
++ generator.py: Một trình tạo để load mô hình, khởi động môi trường giả lập, tiến hành mô phỏng và ghi lại kết quả.
++ anon_env.py: Định nghĩa môi trường giả lập để tương tác với bộ giả lập và thu được đặc trưng.
++ construct_sample.py: Xây dựng mẫu dữ liệu huấn luyện từ dữ liệu gốc. Chọn các đặc trưng trạng thái mong muốn trong cấu hình và tính toán reward trung bình/tức thì tương ứng với thời gian đo cụ thể
++ updater.py: Định nghĩa một lớp của bộ cập nhật để cập nhật mô hình
