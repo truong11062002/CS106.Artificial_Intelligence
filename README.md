@@ -54,3 +54,6 @@ Những chỉnh sửa trong source code (nhằm để tương thích với phiê
 + anon_env.py: sửa "import engine" thành "import pyttsx3", trước đó phải "pip install pyttsx3"
 + simple_dqn_agent.py + network_agent.py: sửa "from keras.optimizers import RMSprop" thành "from tensorflow.keras.optimizers import RMSprop"
 + network_agent: sửa "from keras.engine.topology import Layer" thành "from tensorflow.keras.layers import Layer"
+
+* Mô tả các file trong source code:
+
