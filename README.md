@@ -49,5 +49,8 @@
 | 4      | 20520309      | Lại Chí Thiện          |https://github.com/laichithien                        |20520309@gm.uit.edu.vn   |
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
-1. Tên đồ án: Traffic Signal Control
-
+Tên đồ án: Traffic Signal Control
+Những chỉnh sửa trong source code (nhằm để tương thích với phiên bản hiện tại trên Google Colaboratory) ở các file sau:
++ anon_env.py: sửa "import engine" thành "import pyttsx3", trước đó phải "pip install pyttsx3"
++ simple_dqn_agent.py + network_agent.py: sửa "from keras.optimizers import RMSprop" thành "from tensorflow.keras.optimizers import RMSprop"
++ network_agent: sửa "from keras.engine.topology import Layer" thành "from tensorflow.keras.layers import Layer"
